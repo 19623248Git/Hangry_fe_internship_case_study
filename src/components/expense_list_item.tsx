@@ -17,8 +17,8 @@ export default function ExpenseListItem({ expense }: ExpenseListItemProps) {
                 <div className="flex items-center justify-between p-4 mb-3 bg-white border border-gray-100 rounded-xl shadow-sm hover:bg-gray-50 transition-colors">
                 
                         <div className="flex items-center gap-4">
-                                {/* Left Side: Icon Container */}
-                                {/* Using a green theme based on the screenshot's income items */}
+                                
+                                {/* Green Arrow Icon */}
                                 <div className="flex items-center justify-center w-10 h-10 bg-green-50 rounded-full text-green-500 shrink-0">
                                         <svg 
                                                 xmlns="http://www.w3.org/2000/svg" 
@@ -32,7 +32,7 @@ export default function ExpenseListItem({ expense }: ExpenseListItemProps) {
                                         </svg>
                                 </div>
 
-                                {/* Middle: Text Details */}
+                                {/* Some Text Details */}
                                 <div className="flex flex-col">
 
                                         <div className="text-xs font-semibold text-gray-400 mb-1 flex items-center gap-1.5 uppercase tracking-wide">
@@ -47,7 +47,7 @@ export default function ExpenseListItem({ expense }: ExpenseListItemProps) {
                                 </div>
                         </div>
 
-                        {/* Right Side: Amount */}
+                        {/* Amount */}
                         <div className="text-sm font-bold text-gray-800">
                                 {formattedAmount}
                         </div>
