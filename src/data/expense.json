@@ -1,0 +1,37 @@
+[
+        {
+                "Date": "2026-05-11",
+                "Account": "BCA",
+                "Category": "Food & Beverage",
+                "Note": "Lunch at Nasi Padang",
+                "Amount": 45000
+        },
+        {
+                "Date": "2026-05-11",
+                "Account": "Bank Mandiri",
+                "Category": "Transportation",
+                "Note": "Gojek to Office",
+                "Amount": 25000
+        },
+        {
+                "Date": "2026-05-10",
+                "Account": "Bank Jago",
+                "Category": "Utilities",
+                "Note": "Monthly Internet Bill",
+                "Amount": 350000
+        },
+        {
+                "Date": "2026-05-10",
+                "Account": "BNI",
+                "Category": "Groceries",
+                "Note": "Indomaret Snacks & Drinks",
+                "Amount": 65000
+        },
+        {
+                "Date": "2026-05-09",
+                "Account": "BRI",
+                "Category": "Entertainment",
+                "Note": "Cinema Tickets",
+                "Amount": 100000
+        }
+]
