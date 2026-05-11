@@ -71,10 +71,10 @@ export default function ExpenseList({ expensesList }: expensesListProp){
         }, {} as Record<string, Expense[]>);
 
         return(
-                <div className="w-full max-w-3xl mx-auto mt-8">
+                <div className="w-full max-w-3xl mx-auto">
 
                         {/* filterbar or smth idk */}
-                        <div className="flex items-center justify-between bg-gray-50/80 p-3 rounded-t-xl border border-gray-100 mb-6">
+                        <div className="flex items-center justify-between bg-gray-50/80 p-3 border border-gray-100 mb-6">
         
                                 <div className="flex space-x-1">
                                 {CAT_FILTERS.map((filter) => (
