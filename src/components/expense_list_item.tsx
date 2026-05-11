@@ -16,7 +16,7 @@ export default function ExpenseListItem({ expense }: ExpenseListItemProps) {
         return (
                 <div className="flex items-center justify-between p-4 mb-3 bg-white border border-gray-100 rounded-xl shadow-sm hover:bg-gray-50 transition-colors">
                 
-                        <div className="flex items-center gap-4">
+                        <div className="flex items-center gap-4 flex-1 min-w-0">
                                 
                                 {/* Green Arrow Icon */}
                                 <div className="flex items-center justify-center w-10 h-10 bg-green-50 rounded-full text-green-500 shrink-0">
@@ -33,7 +33,7 @@ export default function ExpenseListItem({ expense }: ExpenseListItemProps) {
                                 </div>
 
                                 {/* Some Text Details */}
-                                <div className="flex flex-col">
+                                <div className="flex flex-col flex-1 min-w-0">
 
                                         <div className="text-xs font-semibold text-gray-400 mb-1 flex items-center gap-1.5 uppercase tracking-wide">
                                                 <span className="text-blue-500">{expense.Account}</span>
@@ -41,7 +41,7 @@ export default function ExpenseListItem({ expense }: ExpenseListItemProps) {
                                                 <span>{expense.Category}</span>
                                         </div>
                                         
-                                        <div className="text-sm font-semibold text-gray-800">
+                                        <div className="text-sm font-semibold text-gray-800 max-h-12 overflow-y-auto break-words pr-2 no-scrollbar">
                                                 {expense.Note}
                                         </div>
                                 </div>

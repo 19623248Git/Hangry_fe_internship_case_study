@@ -119,7 +119,7 @@ export default function ExpenseList({ expensesList }: expensesListProp){
                         </div>
 
                         {/* The actual list */}
-                        <div className="w-full max-w-3xl mx-auto">
+                        <div className="w-full max-w-3xl mx-auto overflow-y-auto pr-2">
                                 {groupedExpenseEntries.map(([groupName, expensesInGroup]) => (
                                         <div key={groupName} className="mb-6">
                                                 <div className="mb-3 px-2">
@@ -142,7 +142,7 @@ export default function ExpenseList({ expensesList }: expensesListProp){
                                         No transactions match your search.
                                         </div>
                                 )}
-                        </div>
+                        </div>  
                         
                 </div>
         )
