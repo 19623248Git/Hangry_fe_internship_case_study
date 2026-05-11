@@ -10,4 +10,4 @@ This is a repository for the hangry frontend internship: study case application.
 
 ## Deployment Service
 - Vercel
-
+- Check out the application here: [https://hangry-fe-internship.smallwar20.dev](https://hangry-fe-internship.smallwar20.dev)
