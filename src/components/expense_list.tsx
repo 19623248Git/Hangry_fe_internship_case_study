@@ -84,7 +84,7 @@ export default function ExpenseList({ expensesList }: expensesListProp){
                         {/* filterbar or smth idk */}
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between bg-gray-50/80 p-3 border border-gray-100 mb-6">
         
-                                <div className="flex space-x-1 overflow-x-auto w-full sm:w-auto pb-1 sm:pb-0">
+                                <div className="flex space-x-1 overflow-x-auto w-full sm:w-auto pb-4 sm:pb-0">
                                 {CAT_FILTERS.map((filter) => (
                                         <button
                                                 key={filter}
@@ -119,7 +119,7 @@ export default function ExpenseList({ expensesList }: expensesListProp){
                         </div>
 
                         {/* The actual list */}
-                        <div className="w-full max-w-3xl mx-auto overflow-y-auto pr-2">
+                        <div className="w-full max-w-3xl mx-auto overflow-y-auto px-2">
                                 {groupedExpenseEntries.map(([groupName, expensesInGroup]) => (
                                         <div key={groupName} className="mb-6">
                                                 <div className="mb-3 px-2">
