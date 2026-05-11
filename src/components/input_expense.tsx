@@ -90,7 +90,7 @@ export default function InputExpense({ onAddExpense }: InputExpenseProps) {
         };
 
         return (
-                <div className="w-full max-w-3xl mx-auto bg-white border border-gray-200 mt-8">
+                <div className="w-full max-w-3xl mx-auto bg-white border border-gray-200">
                 
                         {/* shortcut display */}
                         <div className="flex items-center px-4 py-2 bg-gray-50/50 border-b border-gray-200 text-xs text-gray-400 font-medium overflow-x-auto whitespace-nowrap">
