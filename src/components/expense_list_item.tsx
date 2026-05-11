@@ -41,7 +41,7 @@ export default function ExpenseListItem({ expense }: ExpenseListItemProps) {
                                                 <span>{expense.Category}</span>
                                         </div>
                                         
-                                        <div className="text-sm font-semibold text-gray-800 max-h-12 overflow-y-auto break-words pr-2 no-scrollbar">
+                                        <div className="text-sm font-semibold text-gray-800 max-h-24 overflow-y-auto break-words pr-2 no-scrollbar">
                                                 {expense.Note}
                                         </div>
                                 </div>
