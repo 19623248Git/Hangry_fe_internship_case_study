@@ -70,6 +70,14 @@ export default function ExpenseList({ expensesList }: expensesListProp){
 
         }, {} as Record<string, Expense[]>);
 
+        // TO ENSURE THE VIEW SHOWS TODAY, YESTERDAY, AND FEW DAYS AGO IN ORDER
+        const orderedDateGroups = ["TODAY", "YESTERDAY", "FEW DAYS AGO"];
+        const groupedExpenseEntries = catfilter === "Date"
+                ? orderedDateGroups
+                        .filter((label) => groupedExpenses[label]?.length)
+                        .map((label) => [label, groupedExpenses[label]] as [string, Expense[]])
+                : Object.entries(groupedExpenses);
+
         return(
                 <div className="w-full max-w-3xl mx-auto">
 
@@ -112,7 +120,7 @@ export default function ExpenseList({ expensesList }: expensesListProp){
 
                         {/* The actual list */}
                         <div className="w-full max-w-3xl mx-auto">
-                                {Object.entries(groupedExpenses).map(([groupName, expensesInGroup]) => (
+                                {groupedExpenseEntries.map(([groupName, expensesInGroup]) => (
                                         <div key={groupName} className="mb-6">
                                                 <div className="mb-3 px-2">
                                                         <h3 className="text-xs font-bold text-gray-400 tracking-wider">
