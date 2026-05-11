@@ -82,9 +82,9 @@ export default function ExpenseList({ expensesList }: expensesListProp){
                 <div className="w-full max-w-3xl mx-auto">
 
                         {/* filterbar or smth idk */}
-                        <div className="flex items-center justify-between bg-gray-50/80 p-3 border border-gray-100 mb-6">
+                        <div className="flex flex-col sm:flex-row sm:items-center justify-between bg-gray-50/80 p-3 border border-gray-100 mb-6">
         
-                                <div className="flex space-x-1">
+                                <div className="flex space-x-1 overflow-x-auto w-full sm:w-auto pb-1 sm:pb-0">
                                 {CAT_FILTERS.map((filter) => (
                                         <button
                                                 key={filter}
@@ -95,11 +95,11 @@ export default function ExpenseList({ expensesList }: expensesListProp){
                                                         : 'text-gray-500 hover:bg-gray-200/50'
                                                 }`}
                                         >
-                                        By {filter}
+                                                By {filter}
                                         </button>
                                 ))}
                                 </div>
-                                <div className="relative">
+                                <div className="relative w-full sm:w-auto shrink-0">
                                 <svg 
                                         className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" 
                                         fill="none" 
@@ -113,7 +113,7 @@ export default function ExpenseList({ expensesList }: expensesListProp){
                                         placeholder="Search transaction" 
                                         value={searchQuery}
                                         onChange={(e) => setSearchQuery(e.target.value)}
-                                        className="pl-9 pr-4 py-1.5 rounded-full border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-gray-300 w-64 bg-white"
+                                        className="pl-9 pr-4 py-1.5 rounded-full border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-gray-300 w-full sm:w-64 bg-white"
                                 />
                                 </div>
                         </div>
