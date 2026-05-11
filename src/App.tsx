@@ -6,6 +6,7 @@ import type { Expense } from "./data/types/expense";
 
 // React Component Import
 import ExpenseList from './components/expense_list';
+import BannerSummary from "./components/banner_summary";
 
 // React Library Import
 import { useState } from "react";
@@ -22,6 +23,7 @@ function App() {
 
         return (
                 <>
+                        <BannerSummary expensesList={expenses}/>
                         <ExpenseList expensesList={expenses}/>
                 </>
         )
