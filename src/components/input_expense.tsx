@@ -115,7 +115,7 @@ export default function InputExpense({ onAddExpense }: InputExpenseProps) {
                         <form 
                                 onSubmit={handleSubmit} 
                                 onKeyDown={handleFormKeyDown} 
-                                className="grid grid-cols-5 text-sm"
+                                className="flex flex-col md:flex-row text-sm w-full"
                         >
                                 
                                 <label className={`p-3 border-r border-gray-200 transition-colors ${activeField === 'date' ? 'border-b-2 border-b-black' : 'border-b-2 border-b-transparent'}`}>
@@ -183,7 +183,7 @@ export default function InputExpense({ onAddExpense }: InputExpenseProps) {
                                         />
                                 </label>
 
-                                <label className={`p-3 transition-colors ${activeField === 'amount' ? 'border-b-2 border-b-black' : 'border-b-2 border-b-transparent'}`}>
+                                <label className={`flex-1 p-3 transition-colors border-b-2 ${activeField === 'amount' ? 'border-b-black' : 'border-b-transparent'}`}>
                                         <span className="block text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">
                                                 Amount
                                         </span>
