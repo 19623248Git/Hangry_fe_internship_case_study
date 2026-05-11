@@ -1,32 +1,31 @@
-// Data Import
-import { parsedExpensesList } from "./data/parsed_expenses"
-
-// Type Import
-import type { Expense } from "./data/types/expense";
-
 // React Component Import
-import ExpenseList from './components/expense_list';
-import BannerSummary from "./components/banner_summary";
-import InputExpense from "./components/input_expense";
+import Navbar from './components/navbar';
+
+// React Pages Import
+import TransactionPage from "./pages/transaction";
+import MockAccounts from "./pages/mock_accounts";
+import MockSettings from "./pages/mock_settings";
 
 // React Library Import
-import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 
 function App() {
 
-        const [expenses, setExpenses] = useState<Expense[]>(parsedExpensesList);
-
-        // Add a handler that updates the state when called
-        const handleAddNewExpense = (newExp: Expense) => {
-                setExpenses([newExp,...expenses])
-        };
-
         return (
                 <>
-                        <InputExpense onAddExpense={handleAddNewExpense} />
-                        <BannerSummary expensesList={expenses}/>
-                        <ExpenseList expensesList={expenses}/>
+                        <Router>
+                                <div className="min-h-screen bg-gray-50 flex flex-col font-sans">
+                                        <Navbar />
+                                        <Routes>
+                                                <Route path="/transactions" element={<TransactionPage />} />
+                                                <Route path="/accounts" element={<MockAccounts />} />
+                                                <Route path="/settings" element={<MockSettings />} />
+                                                <Route path="*" element={<Navigate to="/transactions" replace />} />
+                                        </Routes>
+                                        
+                                </div>
+                        </Router>
                 </>
         )
 }
