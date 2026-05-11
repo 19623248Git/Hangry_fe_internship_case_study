@@ -29,34 +29,34 @@ export default function BannerSummary({ expensesList }: BannerSummaryProps){
 
         return (
                 <>
-                        <div className="w-full max-w-3xl mx-auto flex items-center bg-gray-50 border-y border-gray-200">
+                        <div className="w-full max-w-3xl mx-auto flex items-stretch bg-gray-50 border-y border-gray-200">
                                 
-                                <div className="flex-1 p-4 border-r border-gray-200 flex justify-between items-center">
-                                        <span className="text-xs font-bold text-gray-500 tracking-widest uppercase">
+                                <div className="flex-1 p-3 sm:p-4 border-r border-gray-200 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 sm:gap-0 overflow-hidden">
+                                        <span className="text-[10px] sm:text-xs font-bold text-gray-500 tracking-widest uppercase shrink-0">
                                                 Expense ↗
                                         </span>
-                                        <span className="text-sm font-bold text-red-500">
+                                        <span className="text-xs sm:text-sm font-bold text-red-500 truncate text-left sm:text-right">
                                                 {formatIDR(totalExpense)}
                                         </span>
                                 </div>
 
                                 <div 
                                         onClick={() => setIsInputModalOpen(true)}
-                                        className="flex-1 p-4 border-r border-gray-200 flex justify-between items-center cursor-pointer hover:bg-gray-100 transition-colors"
+                                        className="flex-1 p-3 sm:p-4 border-r border-gray-200 flex flex-col sm:flex-row sm:justify-between sm:items-center cursor-pointer hover:bg-gray-100 transition-colors gap-1 sm:gap-0 overflow-hidden"
                                 >
-                                        <span className="text-xs font-bold text-gray-500 tracking-widest uppercase">
+                                        <span className="text-[10px] sm:text-xs font-bold text-gray-500 tracking-widest uppercase shrink-0">
                                                 Income ↘
                                         </span>
-                                        <span className="text-sm font-bold text-green-500">
+                                        <span className="text-xs sm:text-sm font-bold text-green-500 truncate text-left sm:text-right">
                                                 {formatIDR(income)}
                                         </span>
                                 </div>
 
-                                <div className="flex-1 p-4 flex justify-between items-center">
-                                        <span className="text-xs font-bold text-gray-500 tracking-widest uppercase">
+                                <div className="flex-1 p-3 sm:p-4 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 sm:gap-0 overflow-hidden">
+                                        <span className="text-[10px] sm:text-xs font-bold text-gray-500 tracking-widest uppercase shrink-0">
                                                 Total
                                         </span>
-                                        <span className={`text-sm font-bold ${total >= 0 ? 'text-green-500' : 'text-red-500'}`}>
+                                        <span className={`text-xs sm:text-sm font-bold truncate text-left sm:text-right ${total >= 0 ? 'text-green-500' : 'text-red-500'}`}>
                                                 {formatIDR(total)}
                                         </span>
                                 </div>
